@@ -73,50 +73,47 @@
         </div>
     </section>
 
-    <!-- Projects Masonry Grid -->
+    <!-- Projects Grid - 2 Columns Equal Size -->
     <section class="px-8 pb-32 relative">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                <!-- Featured Project - Large 2x2 Card -->
-                <div class="lg:col-span-2 lg:row-span-2 project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden cursor-pointer fade-in" onclick="openModal()">
-                    <div class="relative h-full min-h-96">
-                        <!-- Gradient Background -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900 via-gray-900 to-teal-900 opacity-50"></div>
-                        
-                        <!-- Animated Pattern -->
-                        <div class="absolute inset-0 opacity-10">
-                            <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, #10b981 0, #10b981 1px, transparent 0, transparent 50%); background-size: 20px 20px;"></div>
+                <!-- Project 1: Reverse Engineering -->
+                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden cursor-pointer fade-in h-96" onclick="openModal()">
+                    <div class="relative h-full">
+                        <!-- Project Image Background -->
+                        <div class="absolute inset-0">
+                            <img src="images/final-cad.png" alt="Final CAD Model" class="w-full h-full object-cover opacity-30">
                         </div>
                         
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                        
                         <!-- Content -->
-                        <div class="relative h-full flex flex-col justify-end p-8 bg-gradient-to-t from-black via-black/80 to-transparent">
+                        <div class="relative h-full flex flex-col justify-end p-8">
                             <span class="inline-block px-3 py-1 bg-emerald-500 bg-opacity-20 text-emerald-400 text-sm rounded-full mb-4 w-fit border border-emerald-500">
                                 MECHANICAL ENGINEERING
                             </span>
                             
-                            <h3 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-white">
                                 Reverse Engineering of Rod Cap
                             </h3>
                             
-                            <p class="text-gray-300 mb-6 text-base leading-relaxed">
-                                Complete 3D scanning workflow from physical connecting rod cap to precise CAD model. 
-                                Utilized Scantech scanner and Fusion 360 for full reconstruction process.
+                            <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                                Complete 3D scanning workflow from physical connecting rod cap to precise CAD model.
                             </p>
                             
-                            <div class="mb-6">
-                                <div class="text-emerald-400 text-sm font-semibold mb-3">TECHNOLOGIES USED</div>
+                            <div class="mb-4">
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Scantech 3D Scanner</span>
-                                    <span class="px-3 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Fusion 360</span>
-                                    <span class="px-3 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">3D Meshing</span>
-                                    <span class="px-3 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">CAD Modeling</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Scantech 3D Scanner</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Fusion 360</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">CAD Modeling</span>
                                 </div>
                             </div>
                             
-                            <div class="flex items-center text-emerald-400 font-semibold">
+                            <div class="flex items-center text-emerald-400 font-semibold text-sm">
                                 <span>Click to view full process</span>
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                                 </svg>
                             </div>
@@ -125,8 +122,8 @@
                 </div>
 
                 <!-- Placeholder Project 2 -->
-                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.1s;">
-                    <div class="h-64 flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.1s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
                         <div class="text-center p-6">
                             <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
                                 <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -140,8 +137,8 @@
                 </div>
 
                 <!-- Placeholder Project 3 -->
-                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.2s;">
-                    <div class="h-64 flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.2s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
                         <div class="text-center p-6">
                             <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
                                 <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -155,8 +152,8 @@
                 </div>
 
                 <!-- Placeholder Project 4 -->
-                <div class="lg:col-span-2 project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.3s;">
-                    <div class="h-64 flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.3s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
                         <div class="text-center p-6">
                             <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
                                 <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -165,21 +162,6 @@
                             </div>
                             <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
                             <p class="text-gray-600 text-sm">Structural Analysis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Placeholder Project 5 -->
-                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in" style="animation-delay: 0.4s;">
-                    <div class="h-64 flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
-                        <div class="text-center p-6">
-                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
-                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
-                            <p class="text-gray-600 text-sm">More Projects</p>
                         </div>
                     </div>
                 </div>
@@ -246,16 +228,14 @@
                         CAD model form. After obtaining accurate dimensions from the scan, the part was reverse-engineered to 
                         create a final, production-ready CAD model of the connecting rod cap.
                     </p>
+                    <div class="mt-4 flex items-center text-gray-400">
+                        <svg class="w-5 h-5 mr-2 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span><strong>Project Location:</strong> University of Luxembourg</span>
+                    </div>
                 </div>
-                    </p>
-    <div class="mt-4 flex items-center text-gray-400">
-        <svg class="w-5 h-5 mr-2 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-        </svg>
-        <span><strong>Project Location:</strong> University of Luxembourg</span>
-    </div>
-</div>
 
                 <!-- Process Steps -->
                 <div class="mb-8">
