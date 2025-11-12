@@ -8,6 +8,22 @@
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
+            background-image: url('images/men.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: -1;
         }
         
         .project-card {
@@ -55,12 +71,6 @@
         </div>
     </nav>
 
-    <!-- Floating Background Blobs -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden">
-        <div class="absolute top-20 right-20 w-96 h-96 bg-emerald-500 opacity-5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 left-20 w-96 h-96 bg-teal-500 opacity-5 rounded-full blur-3xl"></div>
-    </div>
-
     <!-- Hero Section -->
     <section class="pt-32 pb-16 px-8 relative">
         <div class="max-w-7xl mx-auto text-center fade-in">
@@ -79,7 +89,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
                 <!-- Project 1: Reverse Engineering -->
-                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden cursor-pointer fade-in h-96" onclick="openModal()">
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden cursor-pointer fade-in h-96" onclick="openModal()">
                     <div class="relative h-full">
                         <!-- Project Image Background -->
                         <div class="absolute inset-0">
@@ -91,10 +101,6 @@
                         
                         <!-- Content -->
                         <div class="relative h-full flex flex-col justify-end p-8">
-                            <span class="inline-block px-3 py-1 bg-emerald-500 bg-opacity-20 text-emerald-400 text-sm rounded-full mb-4 w-fit border border-emerald-500">
-                                MECHANICAL ENGINEERING
-                            </span>
-                            
                             <h3 class="text-2xl md:text-3xl font-bold mb-3 text-white">
                                 Reverse Engineering of Rod Cap
                             </h3>
@@ -122,7 +128,7 @@
                 </div>
 
                 <!-- Placeholder Project 2 -->
-                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.1s;">
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.1s;">
                     <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
                         <div class="text-center p-6">
                             <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
@@ -137,7 +143,7 @@
                 </div>
 
                 <!-- Placeholder Project 3 -->
-                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.2s;">
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.2s;">
                     <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
                         <div class="text-center p-6">
                             <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
@@ -152,7 +158,7 @@
                 </div>
 
                 <!-- Placeholder Project 4 -->
-                <div class="project-card bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.3s;">
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.3s;">
                     <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
                         <div class="text-center p-6">
                             <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
@@ -162,6 +168,66 @@
                             </div>
                             <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
                             <p class="text-gray-600 text-sm">Structural Analysis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 5 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.4s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">Product Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 6 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.5s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">Sustainability Research</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 7 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.6s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">Material Innovation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 8 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.7s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">More Projects</p>
                         </div>
                     </div>
                 </div>
@@ -181,9 +247,6 @@
             <div class="p-8">
                 <!-- Header -->
                 <div class="mb-8">
-                    <span class="inline-block px-3 py-1 bg-emerald-500 bg-opacity-20 text-emerald-400 text-sm rounded-full mb-4 border border-emerald-500">
-                        MECHANICAL ENGINEERING
-                    </span>
                     <h3 class="text-4xl font-bold mb-4">Reverse Engineering of Rod Cap (Connecting Rod)</h3>
                     <p class="text-xl text-gray-400">Complete 3D scanning and CAD reconstruction workflow</p>
                 </div>
