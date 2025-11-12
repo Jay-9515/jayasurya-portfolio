@@ -14,12 +14,12 @@
             background-image: url('images/airplane-hero.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(15, 23, 42, 0.6) 50%, rgba(0, 0, 0, 0.5) 100%);
+            background: rgba(0, 0, 0, 0.4);
         }
     </style>
 </head>
@@ -41,15 +41,15 @@
     <section id="home" class="min-h-screen hero-section flex items-center justify-center relative px-8">
         <div class="hero-overlay"></div>
         <div class="max-w-7xl mx-auto text-center relative z-10">
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 text-white drop-shadow-2xl">Jaya Surya Pendem</h1>
-            <p class="text-xl md:text-2xl text-gray-100 mb-8 drop-shadow-lg">Building bridges between innovation and sustainability</p>
-            <div class="flex items-center justify-center space-x-6 text-sm mb-8 text-gray-200">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 text-white" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">Jaya Surya Pendem</h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-8" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.8);">Building bridges between innovation and sustainability</p>
+            <div class="flex items-center justify-center space-x-6 text-sm mb-8 text-gray-200" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">
                 <span>Luxembourg, EU</span>
                 <span>jayasuryapendem0@gmail.com</span>
             </div>
             <div class="flex items-center justify-center space-x-4">
-                <a href="projects.html" class="bg-white text-black px-8 py-3 hover:bg-gray-200 transition-all">View Projects</a>
-                <a href="#contact" class="border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-black transition-all">Get in Touch</a>
+                <a href="projects.html" class="bg-white text-black px-8 py-3 hover:bg-gray-200 transition-all shadow-lg">View Projects</a>
+                <a href="#contact" class="border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-black transition-all shadow-lg">Get in Touch</a>
             </div>
         </div>
     </section>
