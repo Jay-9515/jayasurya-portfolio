@@ -11,7 +11,7 @@
         }
         .hero-section {
             position: relative;
-            background-image: url('images/airplane-hero.png');
+            background-image: url('images/airplane-hero.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -20,6 +20,19 @@
             position: absolute;
             inset: 0;
             background: rgba(0, 0, 0, 0.4);
+        }
+        .experience-section {
+            position: relative;
+            background-image: url('images/sustainable.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .experience-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
         }
     </style>
 </head>
@@ -54,21 +67,22 @@
         </div>
     </section>
 
-    <section id="experience" class="py-32 px-8 bg-gray-950">
-        <div class="max-w-7xl mx-auto">
+    <section id="experience" class="py-32 px-8 experience-section relative">
+        <div class="experience-overlay"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
             <h2 class="text-5xl font-bold mb-16">Work Experience</h2>
             <div class="space-y-8">
-                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
+                <div class="bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-2xl font-bold">Commercial Services Consultant</h3>
                     <p class="text-emerald-500 text-lg">Unirac Solar India</p>
                     <p class="text-sm text-gray-500">Oct 2024 - Sept 2025 | Remote, USA</p>
                 </div>
-                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
+                <div class="bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-2xl font-bold">Team Lead - Commercial Design</h3>
                     <p class="text-emerald-500 text-lg">Unirac Solar India</p>
                     <p class="text-sm text-gray-500">Jun 2023 - Aug 2024 | India</p>
                 </div>
-                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
+                <div class="bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-2xl font-bold">Commercial PV Design Engineer</h3>
                     <p class="text-emerald-500 text-lg">Unirac Solar India</p>
                     <p class="text-sm text-gray-500">Feb 2022 - Jul 2023 | India</p>
@@ -122,4 +136,3 @@
 
 </body>
 </html>
-
