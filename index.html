@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaya Surya Pendem - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .hero-section {
+            position: relative;
+            background-image: url('images/airplane-hero.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 15, 13, 0.85) 0%, rgba(26, 47, 35, 0.75) 50%, rgba(13, 27, 20, 0.85) 100%);
+        }
+    </style>
 </head>
 <body class="bg-gray-950 text-white">
     
@@ -21,36 +38,37 @@
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex items-center justify-center px-8 pt-20" style="background: linear-gradient(135deg, #0a0f0d 0%, #1a2f23 50%, #0d1b14 100%);">
-        <div class="max-w-7xl mx-auto text-center">
-            <h1 class="text-6xl md:text-8xl font-bold mb-6">Jaya Surya Pendem</h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-8">Building bridges between innovation and sustainability</p>
-            <div class="flex items-center justify-center space-x-6 text-sm mb-8">
+    <section id="home" class="min-h-screen hero-section flex items-center justify-center relative px-8">
+        <div class="hero-overlay"></div>
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 text-white drop-shadow-2xl">Jaya Surya Pendem</h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-8 drop-shadow-lg">Building bridges between innovation and sustainability</p>
+            <div class="flex items-center justify-center space-x-6 text-sm mb-8 text-gray-200">
                 <span>Luxembourg, EU</span>
                 <span>jayasuryapendem0@gmail.com</span>
             </div>
             <div class="flex items-center justify-center space-x-4">
-                <a href="projects.html" class="bg-white text-black px-8 py-3 hover:bg-gray-200">View Projects</a>
-                <a href="#contact" class="border border-gray-700 px-8 py-3 hover:bg-gray-900">Get in Touch</a>
+                <a href="projects.html" class="bg-white text-black px-8 py-3 hover:bg-gray-200 transition-all">View Projects</a>
+                <a href="#contact" class="border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-black transition-all">Get in Touch</a>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-32 px-8">
+    <section id="experience" class="py-32 px-8 bg-gray-950">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-5xl font-bold mb-16">Work Experience</h2>
             <div class="space-y-8">
-                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl">
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-2xl font-bold">Commercial Services Consultant</h3>
                     <p class="text-emerald-500 text-lg">Unirac Solar India</p>
                     <p class="text-sm text-gray-500">Oct 2024 - Sept 2025 | Remote, USA</p>
                 </div>
-                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl">
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-2xl font-bold">Team Lead - Commercial Design</h3>
                     <p class="text-emerald-500 text-lg">Unirac Solar India</p>
                     <p class="text-sm text-gray-500">Jun 2023 - Aug 2024 | India</p>
                 </div>
-                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl">
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-2xl font-bold">Commercial PV Design Engineer</h3>
                     <p class="text-emerald-500 text-lg">Unirac Solar India</p>
                     <p class="text-sm text-gray-500">Feb 2022 - Jul 2023 | India</p>
@@ -63,7 +81,7 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-5xl font-bold mb-16">Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl">
+                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-xl font-bold text-emerald-500 mb-4">Design Software</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">AutoCAD</span>
@@ -72,7 +90,7 @@
                         <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">Siemens NX</span>
                     </div>
                 </div>
-                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl">
+                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-xl font-bold text-emerald-500 mb-4">Languages</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">English (B2)</span>
@@ -85,18 +103,18 @@
         </div>
     </section>
 
-    <section id="contact" class="py-32 px-8">
+    <section id="contact" class="py-32 px-8 bg-gray-950">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-5xl font-bold mb-8">Let's Connect</h2>
             <p class="text-xl text-gray-400 mb-12">Interested in sustainable design? Let's talk.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:jayasuryapendem0@gmail.com" class="bg-white text-black px-12 py-4 hover:bg-gray-200">Email Me</a>
-                <a href="https://linkedin.com/in/jaya-surya-pendem" class="border border-gray-700 px-12 py-4 hover:bg-gray-900">LinkedIn</a>
+                <a href="mailto:jayasuryapendem0@gmail.com" class="bg-white text-black px-12 py-4 hover:bg-gray-200 transition-all">Email Me</a>
+                <a href="https://linkedin.com/in/jaya-surya-pendem" class="border border-gray-700 px-12 py-4 hover:bg-gray-900 transition-all">LinkedIn</a>
             </div>
         </div>
     </section>
 
-    <footer class="border-t border-gray-800 py-8 px-8">
+    <footer class="border-t border-gray-800 py-8 px-8 bg-gray-950">
         <div class="text-center text-gray-500 text-sm">
             <p>2024 Jaya Surya Pendem. All rights reserved.</p>
         </div>
