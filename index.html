@@ -34,6 +34,19 @@
             inset: 0;
             background: rgba(0, 0, 0, 0.75);
         }
+        .skills-section {
+            position: relative;
+            background-image: url('images/mechdesign.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .skills-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.80);
+        }
     </style>
 </head>
 <body class="bg-gray-950 text-white">
@@ -91,11 +104,12 @@
         </div>
     </section>
 
-    <section id="skills" class="py-32 px-8 bg-gray-900">
-        <div class="max-w-7xl mx-auto">
+    <section id="skills" class="py-32 px-8 skills-section relative">
+        <div class="skills-overlay"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
             <h2 class="text-5xl font-bold mb-16">Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:border-emerald-500 transition-all">
+                <div class="bg-gray-950 bg-opacity-80 backdrop-blur border border-gray-800 p-6 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-xl font-bold text-emerald-500 mb-4">Design Software</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">AutoCAD</span>
@@ -104,7 +118,7 @@
                         <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">Siemens NX</span>
                     </div>
                 </div>
-                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:border-emerald-500 transition-all">
+                <div class="bg-gray-950 bg-opacity-80 backdrop-blur border border-gray-800 p-6 rounded-xl hover:border-emerald-500 transition-all">
                     <h3 class="text-xl font-bold text-emerald-500 mb-4">Languages</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">English (B2)</span>
@@ -136,4 +150,3 @@
 
 </body>
 </html>
-
