@@ -127,17 +127,41 @@
                     </div>
                 </div>
 
-                <!-- Placeholder Project 2 -->
-                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.1s;">
-                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
-                        <div class="text-center p-6">
-                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
-                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                <!-- Project 2: Bell Crank Optimization -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden cursor-pointer fade-in h-96" style="animation-delay: 0.1s;" onclick="openBellCrankModal()">
+                    <div class="relative h-full">
+                        <!-- Project Image Background -->
+                        <div class="absolute inset-0">
+                            <img src="images/bracket-design.png" alt="Bell Crank Optimized Design" class="w-full h-full object-cover opacity-40">
+                        </div>
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                        
+                        <!-- Content -->
+                        <div class="relative h-full flex flex-col justify-end p-8">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-white">
+                                Bell Crank Optimization
+                            </h3>
+                            
+                            <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                                Generative design optimization achieving 53g weight with FOS 2.8 using LUVOCOM 3F PET CF 9780 BK material.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Fusion 360</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Ansys Workbench</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Generative Design</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center text-emerald-400 font-semibold text-sm">
+                                <span>Click to view details</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
-                            <p class="text-gray-600 text-sm">Solar PV Design</p>
                         </div>
                     </div>
                 </div>
@@ -401,6 +425,253 @@
         </div>
     </div>
 
+    <!-- Bell Crank Optimization Modal -->
+    <div id="bellCrankModal" class="modal fixed inset-0 bg-black bg-opacity-95 z-50 items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="sticky top-0 bg-gray-900 border-b border-gray-800 px-8 py-4 flex items-center justify-between">
+                <h2 class="text-2xl font-bold text-white">Project Details</h2>
+                <button onclick="closeBellCrankModal()" class="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+            </div>
+            
+            <div class="p-8">
+                <!-- Header -->
+                <div class="mb-8">
+                    <h3 class="text-4xl font-bold mb-4">Bell Crank Optimization with Ansys Workbench and Fusion 360</h3>
+                    <p class="text-xl text-gray-400">Generative design optimization for lightweight structural component</p>
+                </div>
+
+                <!-- Overview -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Project Overview</h4>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        In order to optimize a solid body into a bell crank, a solid body was created in accordance with 
+                        basic design considerations, taking into account the loads as needed. The design utilized the material 
+                        properties of LUVOCOM 3F PET CF 9780 BK, a high-performance carbon fiber reinforced PET material.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        The component was regenerated using Fusion 360 Generative Design, achieving the lowest possible weight 
+                        of approximately 53 grams while maintaining structural integrity under specific load conditions. The 
+                        optimized design achieved a maximum displacement of 0.383 mm with a factor of safety of 2.8, buckling 
+                        factor of 1, and maximum stress of 119.54 MPa corresponding to the load on the body.
+                    </p>
+                    <div class="mt-4 flex items-center text-gray-400">
+                        <svg class="w-5 h-5 mr-2 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span><strong>Project Location:</strong> University of Luxembourg</span>
+                    </div>
+                </div>
+
+                <!-- Project Images Gallery -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Project Visualization & Analysis</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Image 1: Design Specifications -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-design.png" alt="Design Specifications" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Design specifications and constraints</p>
+                        </div>
+                        
+                        <!-- Image 2: Material Properties -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-material.png" alt="Material Datasheet" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">LUVOCOM 3F PET CF 9780 BK material properties</p>
+                        </div>
+                        
+                        <!-- Image 3: Initial Design -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-initial.png" alt="Initial Topology Model" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Initial topology optimization setup</p>
+                        </div>
+                        
+                        <!-- Image 4: Regenerated Model -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-regenerating.png" alt="Regenerating Model" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Generative design regeneration process</p>
+                        </div>
+                        
+                        <!-- Image 5: Final 3D Model -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform md:col-span-2">
+                            <img src="images/bellcrank-final.png" alt="Final Optimized Design" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Final optimized bell crank design (53g)</p>
+                        </div>
+                        
+                        <!-- Image 6: Mass Properties -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-mass.png" alt="Mass Properties" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Mass and volume properties verification</p>
+                        </div>
+                        
+                        <!-- Image 7: Displacement Analysis -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-displacement.png" alt="Displacement Analysis" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Displacement analysis (Max: 0.383mm)</p>
+                        </div>
+                        
+                        <!-- Image 8: Buckling Analysis -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-buckling.png" alt="Buckling Analysis" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Buckling safety factor validation</p>
+                        </div>
+                        
+                        <!-- Image 9: Stress Analysis -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-stress.png" alt="Stress Analysis" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Von Mises stress distribution (Max: 119.54 MPa)</p>
+                        </div>
+                        
+                        <!-- Image 10: Factor of Safety -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-safety.png" alt="Factor of Safety" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Factor of Safety analysis (Min: 2.8)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-6 text-emerald-400">Design & Optimization Process</h4>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-emerald-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-emerald-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-emerald-400 font-bold text-lg">1</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-emerald-400">Initial Design</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Created solid body in accordance with basic design considerations. Analyzed load requirements 
+                                and established design constraints for the bell crank component.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-teal-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-teal-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-teal-400 font-bold text-lg">2</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-teal-400">Material Selection</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Selected LUVOCOM 3F PET CF 9780 BK - a high-performance carbon fiber reinforced PET material 
+                                with excellent strength-to-weight ratio and mechanical properties suitable for demanding applications.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-cyan-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-cyan-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-cyan-400 font-bold text-lg">3</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-cyan-400">Generative Design Optimization</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Used Fusion 360 Generative Design to explore hundreds of design alternatives. The AI-driven 
+                                process optimized for minimum weight while maintaining structural performance requirements.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-emerald-400">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-emerald-400 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-emerald-300 font-bold text-lg">4</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-emerald-300">FEA Validation</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Performed comprehensive structural analysis using Ansys Workbench to validate the optimized 
+                                design. Verified stress distribution, displacement, factor of safety, and buckling behavior 
+                                under applied loads.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Results -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Technical Results</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-900 rounded-lg p-4 border border-emerald-500 border-opacity-30">
+                            <div class="text-emerald-400 font-semibold mb-2">Optimized Weight</div>
+                            <div class="text-3xl font-bold text-white">53 g</div>
+                            <div class="text-sm text-gray-400 mt-1">Achieved minimum weight</div>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-4 border border-teal-500 border-opacity-30">
+                            <div class="text-teal-400 font-semibold mb-2">Factor of Safety</div>
+                            <div class="text-3xl font-bold text-white">2.8</div>
+                            <div class="text-sm text-gray-400 mt-1">Under applied loads</div>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-4 border border-cyan-500 border-opacity-30">
+                            <div class="text-cyan-400 font-semibold mb-2">Maximum Stress</div>
+                            <div class="text-3xl font-bold text-white">119.54 MPa</div>
+                            <div class="text-sm text-gray-400 mt-1">Von Mises stress</div>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-4 border border-emerald-400 border-opacity-30">
+                            <div class="text-emerald-300 font-semibold mb-2">Max Displacement</div>
+                            <div class="text-3xl font-bold text-white">0.383 mm</div>
+                            <div class="text-sm text-gray-400 mt-1">Under load conditions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Technologies and Tools Used</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Fusion 360</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Generative Design</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Ansys Workbench</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">FEA Analysis</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">LUVOCOM 3F PET CF</span>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Key Achievements</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Achieved 53g optimized weight while maintaining structural integrity
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Successfully applied generative design for topology optimization
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Validated design with FEA achieving Factor of Safety 2.8
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Utilized advanced carbon fiber reinforced material for optimal performance
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Demonstrated expertise in AI-driven design optimization workflows
+                        </li>
+                    </ul>
+                </div>
+
+                <button onclick="closeBellCrankModal()" class="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors">
+                    Close Project Details
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="border-t border-gray-800 py-8 px-8 relative">
         <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
@@ -420,10 +691,25 @@
             document.body.style.overflow = 'auto';
         }
 
+        function openBellCrankModal() {
+            document.getElementById('bellCrankModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBellCrankModal() {
+            document.getElementById('bellCrankModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
         window.onclick = function(event) {
-            const modal = document.getElementById('projectModal');
-            if (event.target === modal) {
+            const modal1 = document.getElementById('projectModal');
+            const modal2 = document.getElementById('bellCrankModal');
+            
+            if (event.target === modal1) {
                 closeModal();
+            }
+            if (event.target === modal2) {
+                closeBellCrankModal();
             }
         }
     </script>
