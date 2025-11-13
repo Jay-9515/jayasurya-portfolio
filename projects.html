@@ -93,11 +93,11 @@
                     <div class="relative h-full">
                         <!-- Project Image Background -->
                         <div class="absolute inset-0">
-                            <img src="images/final-cad.png" alt="Final CAD Model" class="w-full h-full object-cover opacity-30">
+                            <img src="images/final-cad.png" alt="Final CAD Model" class="w-full h-full object-contain opacity-30" style="object-position: center 35%;">
                         </div>
                         
                         <!-- Gradient Overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
                         
                         <!-- Content -->
                         <div class="relative h-full flex flex-col justify-end p-8">
@@ -132,11 +132,11 @@
                     <div class="relative h-full">
                         <!-- Project Image Background -->
                         <div class="absolute inset-0">
-                            <img src="images/bracket-design.png" alt="Bell Crank Optimized Design" class="w-full h-full object-cover opacity-40">
+                            <img src="images/bracket-design.png" alt="Bell Crank Optimized Design" class="w-full h-full object-contain opacity-50" style="object-position: center 35%;">
                         </div>
                         
                         <!-- Gradient Overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
                         
                         <!-- Content -->
                         <div class="relative h-full flex flex-col justify-end p-8">
@@ -166,17 +166,41 @@
                     </div>
                 </div>
 
-                <!-- Placeholder Project 3 -->
-                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.2s;">
-                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
-                        <div class="text-center p-6">
-                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
-                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                <!-- Project 3: Single Column Screw Press -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden cursor-pointer fade-in h-96" style="animation-delay: 0.2s;" onclick="openScrewPressModal()">
+                    <div class="relative h-full">
+                        <!-- Project Image Background -->
+                        <div class="absolute inset-0">
+                            <img src="images/press-assembly.png" alt="Screw Press Assembly" class="w-full h-full object-contain opacity-60" style="object-position: center 30%; transform: scale(1.3);">
+                        </div>
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+                        
+                        <!-- Content -->
+                        <div class="relative h-full flex flex-col justify-end p-8">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-white">
+                                Single Column Screw Press Design
+                            </h3>
+                            
+                            <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                                Complete design and FEA analysis of C-frame screw press with generative design base weighing 45kg.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Fusion 360</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Altair Inspire</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Ansys Workbench</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center text-emerald-400 font-semibold text-sm">
+                                <span>Click to view details</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
-                            <p class="text-gray-600 text-sm">CAD Automation</p>
                         </div>
                     </div>
                 </div>
@@ -673,6 +697,234 @@
     </div>
 
     <!-- Footer -->
+<!-- INSERT THIS BEFORE THE FOOTER IN projects.html -->
+
+    <!-- Single Column Screw Press Modal -->
+    <div id="screwPressModal" class="modal fixed inset-0 bg-black bg-opacity-95 z-50 items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="sticky top-0 bg-gray-900 border-b border-gray-800 px-8 py-4 flex items-center justify-between">
+                <h2 class="text-2xl font-bold text-white">Project Details</h2>
+                <button onclick="closeScrewPressModal()" class="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+            </div>
+            
+            <div class="p-8">
+                <!-- Header -->
+                <div class="mb-8">
+                    <h3 class="text-4xl font-bold mb-4">Design and Analysis of Single Column Screw Press Machine</h3>
+                    <p class="text-xl text-gray-400">Complete design workflow using Fusion 360, Altair Inspire, and Ansys Workbench</p>
+                </div>
+
+                <!-- Overview -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Project Overview</h4>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        The sequential method to design and analyze a single-column screw press consisted of: initial hand drawing 
+                        with simple calculations, CAD modelling, and FEA validation. The single-column screw press (C-frame design) 
+                        applies compressive force to components by manually rotating the handwheel, converting the pressure through 
+                        a disc using the leadscrew mechanism.
+                    </p>
+                    <div class="mt-4 flex items-center text-gray-400">
+                        <svg class="w-5 h-5 mr-2 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span><strong>Project Location:</strong> University of Luxembourg</span>
+                    </div>
+                </div>
+
+                <!-- Component Design Images -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Component Designs</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Screw Design -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/screw-design.png" alt="Screw Design" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400"><strong>Leadscrew:</strong> AISI4140 Steel, Trapezoidal thread, Ø22mm</p>
+                        </div>
+                        
+                        <!-- Cast Pressure Plate -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/cast-part-pressure-plate.png" alt="Cast Pressure Plate" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400"><strong>Pressure Plate (Cast):</strong> Gray Cast Iron ASTM Grade 40, Ø320mm</p>
+                        </div>
+                        
+                        <!-- Machined Pressure Plate -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/machined-part-pressure-plate.png" alt="Machined Pressure Plate" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400"><strong>Pressure Plate (Machined):</strong> Final machined part, 4° draft angle, 5.3kg</p>
+                        </div>
+                        
+                        <!-- Hertz Contact Stress -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/hertz-contact-stress.png" alt="Hertz Contact Analysis" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400"><strong>Contact Analysis:</strong> 11269.6 MPa stress, 141.2 μm deformation</p>
+                        </div>
+                        
+                        <!-- Bush -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bush.png" alt="Bronze Bush" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400"><strong>Bush:</strong> Bronze material for smooth screw operation</p>
+                        </div>
+                        
+                        <!-- Handle -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/handle.png" alt="Handwheel" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400"><strong>Handwheel:</strong> Steel AISI 1018 for manual operation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Base Design Section -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Base Structure Design</h4>
+                    
+                    <!-- Material Properties -->
+                    <div class="bg-gray-800 rounded-lg p-4 mb-4">
+                        <img src="images/properties-base.png" alt="Base Material Properties" class="w-full rounded-lg mb-2">
+                        <p class="text-sm text-gray-400"><strong>Material:</strong> Ductile Cast Iron ASTM A536 60-40-18</p>
+                    </div>
+                    
+                    <!-- Cast and Machined Base -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/castpart-base.png" alt="Cast Base" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400"><strong>Cast Base:</strong> Generative design using Altair Inspire</p>
+                        </div>
+                        
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/machinedpart-base.png" alt="Machined Base" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400"><strong>Machined Base:</strong> Final weight ~45kg after machining</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Load Analysis -->
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <img src="images/visual-loads-base.png" alt="Load Analysis" class="w-full rounded-lg mb-2">
+                        <p class="text-sm text-gray-400"><strong>FEA Loads:</strong> 20kN forces and moments with remote supports on mounting holes</p>
+                    </div>
+                </div>
+
+                <!-- Design Process -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-6 text-emerald-400">Design Methodology</h4>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-emerald-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-emerald-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-emerald-400 font-bold text-lg">1</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-emerald-400">Hand Drawings & Calculations</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Initial conceptual design phase with manual calculations for force analysis, thread parameters, 
+                                and structural requirements. Established design constraints and performance targets.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-teal-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-teal-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-teal-400 font-bold text-lg">2</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-teal-400">CAD Modelling in Fusion 360</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Detailed 3D modeling of all components including leadscrew with trapezoidal threads, pressure plate, 
+                                handwheel, bush, and C-frame base. Used Altair Inspire for generative design optimization of the base structure.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-cyan-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-cyan-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-cyan-400 font-bold text-lg">3</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-cyan-400">FEA Validation with Ansys Workbench</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Comprehensive structural analysis including Hertz contact stress analysis, load distribution validation 
+                                with 20kN forces and moments, and verification of structural integrity under operating conditions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Specifications -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Technical Specifications</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
+                        <div>
+                            <p class="mb-2"><strong class="text-emerald-400">Stroke Length:</strong> 180.01 mm</p>
+                            <p class="mb-2"><strong class="text-emerald-400">Applied Force:</strong> 20 kN</p>
+                            <p class="mb-2"><strong class="text-emerald-400">Thread Type:</strong> Trapezoidal Symmetrical</p>
+                            <p class="mb-2"><strong class="text-emerald-400">Screw Diameter:</strong> 22 mm</p>
+                        </div>
+                        <div>
+                            <p class="mb-2"><strong class="text-emerald-400">Pressure Plate Ø:</strong> 320 mm</p>
+                            <p class="mb-2"><strong class="text-emerald-400">Contact Stress:</strong> 11269.6 MPa</p>
+                            <p class="mb-2"><strong class="text-emerald-400">Contact Deformation:</strong> 141.2 μm</p>
+                            <p class="mb-2"><strong class="text-emerald-400">Base Weight:</strong> ~45 kg</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Technologies and Tools Used</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Fusion 360</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Altair Inspire</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Ansys Workbench</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Generative Design</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">FEA Analysis</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Hertz Contact Theory</span>
+                    </div>
+                </div>
+
+                <!-- Key Achievements -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Key Achievements</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Completed full design cycle from hand calculations to validated CAD model
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Successfully applied generative design to optimize base structure weight to 45kg
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Validated contact stress analysis achieving 141.2 μm deformation under 20kN load
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Designed manufacturing-ready components with proper casting and machining considerations
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Integrated multiple analysis tools (Fusion 360, Altair Inspire, Ansys) for comprehensive validation
+                        </li>
+                    </ul>
+                </div>
+
+                <button onclick="closeScrewPressModal()" class="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors">
+                    Close Project Details
+                </button>
+            </div>
+        </div>
+    </div>
     <footer class="border-t border-gray-800 py-8 px-8 relative">
         <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
             <p>&copy; 2024 Jaya Surya Pendem. All rights reserved.</p>
@@ -701,15 +953,29 @@
             document.body.style.overflow = 'auto';
         }
 
+        function openScrewPressModal() {
+            document.getElementById('screwPressModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeScrewPressModal() {
+            document.getElementById('screwPressModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
         window.onclick = function(event) {
             const modal1 = document.getElementById('projectModal');
             const modal2 = document.getElementById('bellCrankModal');
+            const modal3 = document.getElementById('screwPressModal');
             
             if (event.target === modal1) {
                 closeModal();
             }
             if (event.target === modal2) {
                 closeBellCrankModal();
+            }
+            if (event.target === modal3) {
+                closeScrewPressModal();
             }
         }
     </script>
