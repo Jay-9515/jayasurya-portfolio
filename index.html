@@ -3,153 +3,716 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaya Surya Pendem - Portfolio</title>
+    <title>Projects - Jaya Surya Pendem</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
-        }
-        .hero-section {
-            position: relative;
-            background-image: url('images/airplane-hero.png');
+            background-image: url('images/men.jpg');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-        }
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.4);
-        }
-        .experience-section {
-            position: relative;
-            background-image: url('images/sustainable.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             background-attachment: fixed;
-        }
-        .experience-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.75);
-        }
-        .skills-section {
-            position: relative;
-            background-image: url('images/mechdesign.jpg');
-            background-size: cover;
-            background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
         }
-        .skills-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.80);
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: -1;
+        }
+        
+        .project-card {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal {
+            display: none;
+        }
+        
+        .modal.active {
+            display: flex;
         }
     </style>
 </head>
 <body class="bg-gray-950 text-white">
     
+    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950 bg-opacity-90 backdrop-blur border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-            <a href="#home" class="flex items-center">
+            <a href="index.html" class="flex items-center">
                 <img src="images/icon3-mountain.png" alt="JSP Logo" class="h-10 w-auto">
             </a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-400 hover:text-white text-sm">Home</a>
-                <a href="projects.html" class="text-gray-400 hover:text-white text-sm">Projects</a>
-                <a href="#experience" class="text-gray-400 hover:text-white text-sm">Experience</a>
-                <a href="#skills" class="text-gray-400 hover:text-white text-sm">Skills</a>
-                <a href="#contact" class="text-gray-400 hover:text-white text-sm">Contact</a>
-            </div>
+            <a href="index.html" class="text-gray-400 hover:text-white transition-colors text-sm">← Back to Portfolio</a>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen hero-section flex items-center justify-center relative px-8">
-        <div class="hero-overlay"></div>
-        <div class="max-w-7xl mx-auto text-center relative z-10">
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 text-white" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">Jaya Surya Pendem</h1>
-            <p class="text-xl md:text-2xl text-gray-100 mb-8" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.8);">Building bridges between innovation and sustainability</p>
-            <div class="flex items-center justify-center space-x-6 text-sm mb-8 text-gray-200" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">
-                <span>Luxembourg, EU</span>
-                <span>jayasuryapendem0@gmail.com</span>
-            </div>
-            <div class="flex items-center justify-center space-x-4">
-                <a href="projects.html" class="bg-white text-black px-8 py-3 hover:bg-gray-200 transition-all shadow-lg">View Projects</a>
-                <a href="#contact" class="border-2 border-white text-white px-8 py-3 hover:bg-white hover:text-black transition-all shadow-lg">Get in Touch</a>
-            </div>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-8 relative">
+        <div class="max-w-7xl mx-auto text-center fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-teal-600 bg-clip-text text-transparent">
+                Featured Projects
+            </h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                Exploring innovation through engineering design and sustainable solutions
+            </p>
         </div>
     </section>
 
-    <section id="experience" class="py-32 px-8 experience-section relative">
-        <div class="experience-overlay"></div>
-        <div class="max-w-7xl mx-auto relative z-10">
-            <h2 class="text-5xl font-bold mb-16">Work Experience</h2>
-            <div class="space-y-8">
-                <div class="bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
-                    <h3 class="text-2xl font-bold">Commercial Services Consultant</h3>
-                    <p class="text-emerald-500 text-lg">Unirac Solar India</p>
-                    <p class="text-sm text-gray-500">Oct 2024 - Sept 2025 | Remote, USA</p>
-                </div>
-                <div class="bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
-                    <h3 class="text-2xl font-bold">Team Lead - Commercial Design</h3>
-                    <p class="text-emerald-500 text-lg">Unirac Solar India</p>
-                    <p class="text-sm text-gray-500">Jun 2023 - Aug 2024 | India</p>
-                </div>
-                <div class="bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 p-8 rounded-xl hover:border-emerald-500 transition-all">
-                    <h3 class="text-2xl font-bold">Commercial PV Design Engineer</h3>
-                    <p class="text-emerald-500 text-lg">Unirac Solar India</p>
-                    <p class="text-sm text-gray-500">Feb 2022 - Jul 2023 | India</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="py-32 px-8 skills-section relative">
-        <div class="skills-overlay"></div>
-        <div class="max-w-7xl mx-auto relative z-10">
-            <h2 class="text-5xl font-bold mb-16">Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-950 bg-opacity-80 backdrop-blur border border-gray-800 p-6 rounded-xl hover:border-emerald-500 transition-all">
-                    <h3 class="text-xl font-bold text-emerald-500 mb-4">Design Software</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">AutoCAD</span>
-                        <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">SolidWorks</span>
-                        <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">Fusion 360</span>
-                        <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">Siemens NX</span>
+    <!-- Projects Grid - 2 Columns Equal Size -->
+    <section class="px-8 pb-32 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Project 1: Reverse Engineering -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden cursor-pointer fade-in h-96" onclick="openModal()">
+                    <div class="relative h-full">
+                        <!-- Project Image Background -->
+                        <div class="absolute inset-0">
+                            <img src="images/final-cad.png" alt="Final CAD Model" class="w-full h-full object-cover opacity-30">
+                        </div>
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                        
+                        <!-- Content -->
+                        <div class="relative h-full flex flex-col justify-end p-8">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-white">
+                                Reverse Engineering of Rod Cap
+                            </h3>
+                            
+                            <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                                Complete 3D scanning workflow from physical connecting rod cap to precise CAD model.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Scantech 3D Scanner</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Fusion 360</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">CAD Modeling</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center text-emerald-400 font-semibold text-sm">
+                                <span>Click to view full process</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-gray-950 bg-opacity-80 backdrop-blur border border-gray-800 p-6 rounded-xl hover:border-emerald-500 transition-all">
-                    <h3 class="text-xl font-bold text-emerald-500 mb-4">Languages</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">English (B2)</span>
-                        <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">German (A2)</span>
-                        <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">Telugu (C2)</span>
-                        <span class="px-3 py-1 bg-gray-900 text-sm rounded-full">Hindi (C1)</span>
+
+                <!-- Project 2: Bell Crank Optimization -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden cursor-pointer fade-in h-96" style="animation-delay: 0.1s;" onclick="openBellCrankModal()">
+                    <div class="relative h-full">
+                        <!-- Project Image Background -->
+                        <div class="absolute inset-0">
+                            <img src="images/bracket-design.png" alt="Bell Crank Optimized Design" class="w-full h-full object-cover opacity-40">
+                        </div>
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                        
+                        <!-- Content -->
+                        <div class="relative h-full flex flex-col justify-end p-8">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-3 text-white">
+                                Bell Crank Optimization
+                            </h3>
+                            
+                            <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                                Generative design optimization achieving 53g weight with FOS 2.8 using LUVOCOM 3F PET CF 9780 BK material.
+                            </p>
+                            
+                            <div class="mb-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Fusion 360</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Ansys Workbench</span>
+                                    <span class="px-2 py-1 bg-gray-800 text-emerald-400 text-xs rounded-full border border-emerald-500 border-opacity-30">Generative Design</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center text-emerald-400 font-semibold text-sm">
+                                <span>Click to view details</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Placeholder Project 3 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.2s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">CAD Automation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 4 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.3s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">Structural Analysis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 5 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.4s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">Product Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 6 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.5s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">Sustainability Research</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 7 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.6s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">Material Innovation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 8 -->
+                <div class="project-card bg-gray-900 bg-opacity-90 backdrop-blur border border-gray-800 rounded-2xl overflow-hidden fade-in h-96" style="animation-delay: 0.7s;">
+                    <div class="h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                        <div class="text-center p-6">
+                            <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-gray-700">
+                                <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-500 mb-2">Project Coming Soon</h3>
+                            <p class="text-gray-600 text-sm">More Projects</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-32 px-8 bg-gray-950">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-5xl font-bold mb-8">Let's Connect</h2>
-            <p class="text-xl text-gray-400 mb-12">Interested in sustainable design? Let's talk.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="mailto:jayasuryapendem0@gmail.com" class="bg-white text-black px-12 py-4 hover:bg-gray-200 transition-all">Email Me</a>
-                <a href="https://linkedin.com/in/jaya-surya-pendem" class="border border-gray-700 px-12 py-4 hover:bg-gray-900 transition-all">LinkedIn</a>
+    <!-- Modal Popup -->
+    <div id="projectModal" class="modal fixed inset-0 bg-black bg-opacity-95 z-50 items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="sticky top-0 bg-gray-900 border-b border-gray-800 px-8 py-4 flex items-center justify-between">
+                <h2 class="text-2xl font-bold text-white">Project Details</h2>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+            </div>
+            
+            <div class="p-8">
+                <!-- Header -->
+                <div class="mb-8">
+                    <h3 class="text-4xl font-bold mb-4">Reverse Engineering of Rod Cap (Connecting Rod)</h3>
+                    <p class="text-xl text-gray-400">Complete 3D scanning and CAD reconstruction workflow</p>
+                </div>
+
+                <!-- Project Images Section -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Project Images</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Image 1: Process Stages -->
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <img src="images/reverse-engineering-stages.png" alt="Reverse Engineering Process Stages" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Complete workflow from original part to CAD model</p>
+                        </div>
+                        
+                        <!-- Image 2: Scanned Part -->
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <img src="images/scanned-part.png" alt="Scanned Connecting Rod Cap" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">3D scanned part with high detail capture</p>
+                        </div>
+                        
+                        <!-- Image 3: Meshed Model -->
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <img src="images/meshed-model.png" alt="Meshed 3D Model" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Mesh processing with optimized topology</p>
+                        </div>
+                        
+                        <!-- Image 4: Final CAD -->
+                        <div class="bg-gray-800 rounded-lg p-4">
+                            <img src="images/final-cad.png" alt="Final CAD Model" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Final parametric CAD model in Fusion 360</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overview -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Project Overview</h4>
+                    <p class="text-gray-300 leading-relaxed">
+                        This project demonstrates a complete reverse engineering workflow of a connecting rod cap component. 
+                        The process involves scanning the connecting rod using a Scantech 3D scanner, converting the scanned 
+                        data to a mesh format, redefining the origin, and then reconstructing the part back to its original 
+                        CAD model form. After obtaining accurate dimensions from the scan, the part was reverse-engineered to 
+                        create a final, production-ready CAD model of the connecting rod cap.
+                    </p>
+                    <div class="mt-4 flex items-center text-gray-400">
+                        <svg class="w-5 h-5 mr-2 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span><strong>Project Location:</strong> University of Luxembourg</span>
+                    </div>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-6 text-emerald-400">Process Workflow</h4>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-emerald-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-emerald-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-emerald-400 font-bold text-lg">1</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-emerald-400">3D Scanning</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Used Scantech 3D scanner to capture high-resolution point cloud data of the physical 
+                                connecting rod cap. This created a digital representation with sub-millimeter accuracy.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-teal-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-teal-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-teal-400 font-bold text-lg">2</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-teal-400">Mesh Processing</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Converted point cloud to polygon mesh and refined the surface geometry. Redefined origin 
+                                for proper alignment and optimized mesh topology for efficient CAD reconstruction.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-cyan-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-cyan-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-cyan-400 font-bold text-lg">3</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-cyan-400">CAD Reconstruction</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Created parametric CAD model in Fusion 360 with precise dimensions retrieved from scan data. 
+                                The final model is manufacturing-ready with fully editable features.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Technologies and Tools Used</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Scantech 3D Scanner</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Fusion 360</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">3D Meshing Software</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">CAD Modeling</span>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Key Achievements</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Successfully captured high-precision 3D scan data with sub-millimeter accuracy
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Optimized mesh topology for efficient CAD reconstruction workflow
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Created manufacturing-ready parametric model with fully editable features
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Reduced traditional measurement time by implementing digital reverse engineering workflow
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Successfully reconstructed original connecting rod cap geometry from scan data
+                        </li>
+                    </ul>
+                </div>
+
+                <button onclick="closeModal()" class="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors">
+                    Close Project Details
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="border-t border-gray-800 py-8 px-8 bg-gray-950">
-        <div class="text-center text-gray-500 text-sm">
-            <p>2024 Jaya Surya Pendem. All rights reserved.</p>
+    <!-- Bell Crank Optimization Modal -->
+    <div id="bellCrankModal" class="modal fixed inset-0 bg-black bg-opacity-95 z-50 items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="sticky top-0 bg-gray-900 border-b border-gray-800 px-8 py-4 flex items-center justify-between">
+                <h2 class="text-2xl font-bold text-white">Project Details</h2>
+                <button onclick="closeBellCrankModal()" class="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+            </div>
+            
+            <div class="p-8">
+                <!-- Header -->
+                <div class="mb-8">
+                    <h3 class="text-4xl font-bold mb-4">Bell Crank Optimization with Ansys Workbench and Fusion 360</h3>
+                    <p class="text-xl text-gray-400">Generative design optimization for lightweight structural component</p>
+                </div>
+
+                <!-- Overview -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Project Overview</h4>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        In order to optimize a solid body into a bell crank, a solid body was created in accordance with 
+                        basic design considerations, taking into account the loads as needed. The design utilized the material 
+                        properties of LUVOCOM 3F PET CF 9780 BK, a high-performance carbon fiber reinforced PET material.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        The component was regenerated using Fusion 360 Generative Design, achieving the lowest possible weight 
+                        of approximately 53 grams while maintaining structural integrity under specific load conditions. The 
+                        optimized design achieved a maximum displacement of 0.383 mm with a factor of safety of 2.8, buckling 
+                        factor of 1, and maximum stress of 119.54 MPa corresponding to the load on the body.
+                    </p>
+                    <div class="mt-4 flex items-center text-gray-400">
+                        <svg class="w-5 h-5 mr-2 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span><strong>Project Location:</strong> University of Luxembourg</span>
+                    </div>
+                </div>
+
+                <!-- Project Images Gallery -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Project Visualization & Analysis</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Image 1: Design Specifications -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-design.png" alt="Design Specifications" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Design specifications and constraints</p>
+                        </div>
+                        
+                        <!-- Image 2: Material Properties -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-material.png" alt="Material Datasheet" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">LUVOCOM 3F PET CF 9780 BK material properties</p>
+                        </div>
+                        
+                        <!-- Image 3: Initial Design -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-initial.png" alt="Initial Topology Model" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Initial topology optimization setup</p>
+                        </div>
+                        
+                        <!-- Image 4: Regenerated Model -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-regenerating.png" alt="Regenerating Model" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Generative design regeneration process</p>
+                        </div>
+                        
+                        <!-- Image 5: Final 3D Model -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform md:col-span-2">
+                            <img src="images/bellcrank-final.png" alt="Final Optimized Design" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Final optimized bell crank design (53g)</p>
+                        </div>
+                        
+                        <!-- Image 6: Mass Properties -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-mass.png" alt="Mass Properties" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Mass and volume properties verification</p>
+                        </div>
+                        
+                        <!-- Image 7: Displacement Analysis -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-displacement.png" alt="Displacement Analysis" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Displacement analysis (Max: 0.383mm)</p>
+                        </div>
+                        
+                        <!-- Image 8: Buckling Analysis -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-buckling.png" alt="Buckling Analysis" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Buckling safety factor validation</p>
+                        </div>
+                        
+                        <!-- Image 9: Stress Analysis -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-stress.png" alt="Stress Analysis" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Von Mises stress distribution (Max: 119.54 MPa)</p>
+                        </div>
+                        
+                        <!-- Image 10: Factor of Safety -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/bellcrank-safety.png" alt="Factor of Safety" class="w-full rounded-lg mb-2">
+                            <p class="text-sm text-gray-400">Factor of Safety analysis (Min: 2.8)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-6 text-emerald-400">Design & Optimization Process</h4>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-emerald-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-emerald-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-emerald-400 font-bold text-lg">1</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-emerald-400">Initial Design</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Created solid body in accordance with basic design considerations. Analyzed load requirements 
+                                and established design constraints for the bell crank component.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-teal-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-teal-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-teal-400 font-bold text-lg">2</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-teal-400">Material Selection</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Selected LUVOCOM 3F PET CF 9780 BK - a high-performance carbon fiber reinforced PET material 
+                                with excellent strength-to-weight ratio and mechanical properties suitable for demanding applications.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-cyan-500">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-cyan-500 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-cyan-400 font-bold text-lg">3</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-cyan-400">Generative Design Optimization</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Used Fusion 360 Generative Design to explore hundreds of design alternatives. The AI-driven 
+                                process optimized for minimum weight while maintaining structural performance requirements.
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-emerald-400">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 bg-emerald-400 bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-emerald-300 font-bold text-lg">4</span>
+                                </div>
+                                <h5 class="text-xl font-bold text-emerald-300">FEA Validation</h5>
+                            </div>
+                            <p class="text-gray-300 ml-13">
+                                Performed comprehensive structural analysis using Ansys Workbench to validate the optimized 
+                                design. Verified stress distribution, displacement, factor of safety, and buckling behavior 
+                                under applied loads.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Results -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Technical Results</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-900 rounded-lg p-4 border border-emerald-500 border-opacity-30">
+                            <div class="text-emerald-400 font-semibold mb-2">Optimized Weight</div>
+                            <div class="text-3xl font-bold text-white">53 g</div>
+                            <div class="text-sm text-gray-400 mt-1">Achieved minimum weight</div>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-4 border border-teal-500 border-opacity-30">
+                            <div class="text-teal-400 font-semibold mb-2">Factor of Safety</div>
+                            <div class="text-3xl font-bold text-white">2.8</div>
+                            <div class="text-sm text-gray-400 mt-1">Under applied loads</div>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-4 border border-cyan-500 border-opacity-30">
+                            <div class="text-cyan-400 font-semibold mb-2">Maximum Stress</div>
+                            <div class="text-3xl font-bold text-white">119.54 MPa</div>
+                            <div class="text-sm text-gray-400 mt-1">Von Mises stress</div>
+                        </div>
+                        <div class="bg-gray-900 rounded-lg p-4 border border-emerald-400 border-opacity-30">
+                            <div class="text-emerald-300 font-semibold mb-2">Max Displacement</div>
+                            <div class="text-3xl font-bold text-white">0.383 mm</div>
+                            <div class="text-sm text-gray-400 mt-1">Under load conditions</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Technologies and Tools Used</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Fusion 360</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Generative Design</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">Ansys Workbench</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">FEA Analysis</span>
+                        <span class="px-4 py-2 bg-gray-900 border border-emerald-500 border-opacity-50 text-white rounded-lg">LUVOCOM 3F PET CF</span>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="mb-8 bg-gray-800 rounded-xl p-6">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">Key Achievements</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Achieved 53g optimized weight while maintaining structural integrity
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Successfully applied generative design for topology optimization
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Validated design with FEA achieving Factor of Safety 2.8
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Utilized advanced carbon fiber reinforced material for optimal performance
+                        </li>
+                        <li class="flex items-start text-gray-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Demonstrated expertise in AI-driven design optimization workflows
+                        </li>
+                    </ul>
+                </div>
+
+                <button onclick="closeBellCrankModal()" class="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-semibold transition-colors">
+                    Close Project Details
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8 px-8 relative">
+        <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
+            <p>&copy; 2024 Jaya Surya Pendem. All rights reserved.</p>
+            <p class="mt-2">Master's Student in Sustainable Product Creation &bull; University of Luxembourg</p>
         </div>
     </footer>
 
+    <script>
+        function openModal() {
+            document.getElementById('projectModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openBellCrankModal() {
+            document.getElementById('bellCrankModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBellCrankModal() {
+            document.getElementById('bellCrankModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal1 = document.getElementById('projectModal');
+            const modal2 = document.getElementById('bellCrankModal');
+            
+            if (event.target === modal1) {
+                closeModal();
+            }
+            if (event.target === modal2) {
+                closeBellCrankModal();
+            }
+        }
+    </script>
+
 </body>
 </html>
-
