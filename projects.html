@@ -869,6 +869,92 @@
                     </div>
                 </div>
 
+                <!-- FEA Simulation Results (With Moment) -->
+                <div class="mb-8">
+                    <h4 class="text-2xl font-bold mb-4 text-emerald-400">FEA Simulation Results (With Applied Moment)</h4>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Comprehensive finite element analysis was conducted in Ansys Workbench to evaluate the structural performance 
+                        of the C-frame assembly under combined loading conditions. The simulation incorporated both axial compressive 
+                        forces (20 kN) and applied moments to accurately represent real-world operational scenarios and validate the 
+                        structural integrity of the design.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Safety Factor Analysis -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/safty-factot-with-moment.png" alt="Safety Factor Analysis" class="w-full rounded-lg mb-3">
+                            <h5 class="text-lg font-bold text-emerald-400 mb-2">Safety Factor Analysis</h5>
+                            <p class="text-sm text-gray-300 mb-2">
+                                The factor of safety distribution demonstrates excellent structural reliability across the assembly. 
+                                A minimum factor of safety of 2.034 was observed at critical stress concentration regions, while 
+                                the majority of the structure maintains values exceeding 5.0, indicating robust design margins.
+                            </p>
+                            <div class="mt-3 pt-3 border-t border-gray-700">
+                                <p class="text-xs text-gray-400"><strong>Minimum FOS:</strong> 2.034</p>
+                                <p class="text-xs text-gray-400"><strong>Maximum FOS:</strong> 15.00</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Von Mises Stress Analysis -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/maximum-von-mises-stress-with-moment.png" alt="Von Mises Stress Distribution" class="w-full rounded-lg mb-3">
+                            <h5 class="text-lg font-bold text-emerald-400 mb-2">Von Mises Stress Distribution</h5>
+                            <p class="text-sm text-gray-300 mb-2">
+                                The stress analysis reveals a maximum von Mises stress of 135.67 MPa concentrated at the C-frame 
+                                junction under combined loading. The stress gradient demonstrates effective load transfer through 
+                                the structure, with the majority of components experiencing stress levels well below material yield 
+                                strength (276 MPa for ductile cast iron).
+                            </p>
+                            <div class="mt-3 pt-3 border-t border-gray-700">
+                                <p class="text-xs text-gray-400"><strong>Maximum Stress:</strong> 135.67 MPa</p>
+                                <p class="text-xs text-gray-400"><strong>Minimum Stress:</strong> 0.014 MPa</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Displacement Analysis -->
+                        <div class="bg-gray-800 rounded-lg p-4 hover:scale-105 transition-transform">
+                            <img src="images/maximum-displacement.png" alt="Total Displacement" class="w-full rounded-lg mb-3">
+                            <h5 class="text-lg font-bold text-emerald-400 mb-2">Total Displacement Analysis</h5>
+                            <p class="text-sm text-gray-300 mb-2">
+                                The displacement field indicates a maximum total deformation of 0.672 mm occurring at the upper 
+                                extremity of the C-frame structure. This deflection remains within acceptable operational limits 
+                                and validates the structural stiffness of the design. The displacement pattern confirms the 
+                                effectiveness of the base mounting and support configuration.
+                            </p>
+                            <div class="mt-3 pt-3 border-t border-gray-700">
+                                <p class="text-xs text-gray-400"><strong>Maximum Displacement:</strong> 0.672 mm</p>
+                                <p class="text-xs text-gray-400"><strong>Minimum Displacement:</strong> 0.00 mm</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Simulation Summary -->
+                    <div class="mt-6 bg-gray-800 rounded-lg p-6 border-l-4 border-emerald-500">
+                        <h5 class="text-xl font-bold text-emerald-400 mb-3">Structural Performance Summary</h5>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            The finite element analysis validates the structural adequacy of the single-column screw press design 
+                            under operational loading conditions. All critical performance metrics—including factor of safety, stress 
+                            distribution, and deformation characteristics—demonstrate compliance with engineering design criteria. 
+                            The minimum factor of safety of 2.034 provides sufficient margin against material failure, while the 
+                            maximum displacement of 0.672 mm ensures operational precision is maintained throughout the pressing cycle.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div class="bg-gray-900 rounded p-3">
+                                <p class="text-emerald-400 font-bold mb-1">Structural Safety</p>
+                                <p class="text-gray-300">Minimum FOS of 2.034 exceeds typical safety requirements for industrial machinery</p>
+                            </div>
+                            <div class="bg-gray-900 rounded p-3">
+                                <p class="text-emerald-400 font-bold mb-1">Stress Management</p>
+                                <p class="text-gray-300">Peak stress (135.67 MPa) remains 49% below material yield strength</p>
+                            </div>
+                            <div class="bg-gray-900 rounded p-3">
+                                <p class="text-emerald-400 font-bold mb-1">Deflection Control</p>
+                                <p class="text-gray-300">Maximum deflection of 0.672 mm maintains dimensional accuracy during operation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Technologies -->
                 <div class="mb-8 bg-gray-800 rounded-xl p-6">
                     <h4 class="text-2xl font-bold mb-4 text-emerald-400">Technologies and Tools Used</h4>
